@@ -350,19 +350,19 @@ const allQuestions = [
 
       if (selected) {
         const selectedValue = parseInt(selected.value);
-        if (selectedValue === q.correctIndex) {
+        if (selectedValue === q.answer) {
           score++;
           questionBlock.classList.add("correct");
           feedback.innerHTML = `✅ Correct`;
           feedback.style.color = "green";
         } else {
           questionBlock.classList.add("incorrect");
-          feedback.innerHTML = `❌ Wrong – Correct Answer: <strong>${q.options[q.correctAnswer]}</strong>`;
+          feedback.innerHTML = `❌ Wrong – Correct Answer: <strong>${q.options[q.answer]}</strong>`;
           feedback.style.color = "red";
         }
       } else {
         questionBlock.classList.add("incorrect");
-        feedback.innerHTML = `⚠️ Not Answered – Correct Answer: <strong>${q.options[q.correctAnswer]}</strong>`;
+        feedback.innerHTML = `⚠️ Not Answered – Correct Answer: <strong>${q.options[q.answer]}</strong>`;
         feedback.style.color = "orange";
       }
 
